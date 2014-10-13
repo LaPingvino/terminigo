@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.source {
+	background: #daeef3;
+	margin: 2px;
+	padding: 1px;
+	font-size: 75%;	
+}
+
+a img {
+	border: none;
+}
+
+#logo {
+	text-align: center;
+	margin-top: 5%;
+}
+
+#logo img {
+	width: 614px;
+	height: 100px;
+}
+
+#search {
+	margin-top: 2%;
+	vertical-align: top;
+}
+
+#vorto {
+	display: inline;
+	width: 60%;
+	height: 1.5em;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 2px;
+	border: 0;
+	border: thin solid #92cddc;
+}
+
+#submit {
+	display: inline;
+	height: 1.5em;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 2px;
+	background: #f4ffef;
+	border: thin solid #92cddc;
+}
+
+#sercxrezultoj {
+	background: #daeef3; 
+	margin-top: 3%; 
+	margin-bottom: 16px;
+
+	border-top: 1px solid #4bacc6; 
+	border-bottom: 1px solid #4bacc6; 
+	padding-left: 8px; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	padding-right: 4px;
+
+	font-weight: bold;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+.word {
+	display: inline-block;
+}
+
+.wordheader {
+	background: none repeat scroll 0% 0% #DAEEF3;
+	border: 1px solid #92CDDC;
+	padding: 2px;
+}
+
+.definition {
+	border: 1px solid #92CDDC;
+	padding: 2px;
+}
+
+@media (max-device-width: 480px) {
+.word {
+width: 90%;
+height: 3em;
+font-size: 3em;
+}
+}
