@@ -64,6 +64,7 @@ func GetEntries(lang string, target string) (re data.Terminaro) {
 	terminaro := GetTerminaro()
 	if entryCache == nil { entryCache = make(map[[2]string]data.Terminaro) }
 	if len(terminaro) > 1 {
+		targetfound := false
 		for _, entry := range terminaro[1:] {
 			for _, translation := range entry.Translations {
 				if translation.Language == lang || lang == "" {
@@ -72,11 +73,12 @@ func GetEntries(lang string, target string) (re data.Terminaro) {
 							continue
 						}
 						if strings.ToLower(word.Written[:len(target)]) == strings.ToLower(target) {
-							re = append(re, entry)
+							targetfound = true
 						}
 					}
 				}
 			}
+		if targetfound { re = append(re, entry) }
 		}
 	} else { beego.Error("Empty terminaro") }
 	re.SortLang(lang, target)
