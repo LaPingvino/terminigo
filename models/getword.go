@@ -78,7 +78,10 @@ func GetEntries(lang string, target string) (re data.Terminaro) {
 					}
 				}
 			}
-		if targetfound { re = append(re, entry) }
+			if targetfound {
+				re = append(re, entry)
+				targetfound = false
+			}
 		}
 	} else { beego.Error("Empty terminaro") }
 	re.SortLang(lang, target)
